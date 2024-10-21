@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Monitoring Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Monitoring Dashboard</h1>
+
+        <!-- Weather Data Section -->
+        <div>
+            <h2>Weather Data</h2>
+            <select id="weather-city" onchange="fetchWeatherData()">
+                <option value="">Select City</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Hyderabad">Hyderabad</option>
+            </select>
+            <div id="weather-data"></div>
+        </div>
+
+        <!-- Daily Summary Section -->
+        <div>
+            <h2>Daily Summary</h2>
+            <input type="date" id="summary-date">
+            <button onclick="fetchDailySummary()">Get Summary</button>
+            <div id="daily-summary"></div>
+        </div>
+
+        <!-- Alerts Section -->
+        <div>
+            <h2>Alerts</h2>
+            <button onclick="fetchAlerts()">View Alerts</button>
+            <div id="alerts"></div>
+        </div>
+
+        <!-- Plot Section -->
+        <div>
+            <h2>Temperature Trend Plot</h2>
+            <select id="plot-city" onchange="fetchPlot()">
+                <option value="">Select City</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Hyderabad">Hyderabad</option>
+            </select>
+            <img id="plot-image" src="" alt="Temperature Plot" style="display:none;">
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
